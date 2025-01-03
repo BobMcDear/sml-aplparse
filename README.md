@@ -1,3 +1,5 @@
+_This fork adds support for additional primitives, ships with the necessary dependencies, and contains a script for parsing APL files. For use with_ [ada](https://github.com/BobMcDear/ada), _install_ [MLton](http://mlton.org/), _clone this repository, and run_ ```mlton aplparse.mlb```.
+
 # sml-aplparse [![CI](https://github.com/diku-dk/sml-aplparse/workflows/CI/badge.svg)](https://github.com/diku-dk/sml-aplparse/actions)
 
 This Standard ML library implements an APL parser.
