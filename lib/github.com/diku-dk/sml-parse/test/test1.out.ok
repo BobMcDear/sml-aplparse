@@ -1,0 +1,4 @@
+Tokens:
+stdin:1.0-1.2:let, stdin:1.4:y, stdin:1.6:=, stdin:1.8-1.9:82, stdin:1.11:+, stdin:1.13:2, stdin:1.15-1.16:in, stdin:1.18-1.20:let, stdin:1.22:x, stdin:1.24:=, stdin:1.26-1.28:454, stdin:2.0-2.1:in, stdin:2.3:y, stdin:2.5:+, stdin:2.7:x, stdin:2.9:+, stdin:2.11:y, stdin:3.0:+, stdin:3.2-3.3:23, 
+
+Eval = 645
