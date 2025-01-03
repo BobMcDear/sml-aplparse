@@ -34,6 +34,7 @@ datatype token =
        | Sub
        | Times
        | Div
+       | JotDia
        | Pow
        | Lbra | Rbra
        | Lpar | Rpar
@@ -159,6 +160,7 @@ fun pr_token t =
        | Gteq => "Gteq"
        | Eq => "Eq"
        | Neq => "Neq"
+       | JotDia => "JotDia"
        | Zilde => "Zilde"
        | Circ => "Circ"
        | Circstar => "Circstar"
@@ -252,6 +254,7 @@ fun lexWord w =
       | 0wx2228 => SOME Or
       | 0wx2227 => SOME And
       | 0wx2371 => SOME Nor
+      | 0wx2364 => SOME JotDia
       | 0wx2372 => SOME Nand
       | 0wxF7 => SOME Div
       | 0wxD7 => SOME Times

@@ -73,10 +73,12 @@ fun is_symb t =
     | L.Slash => true
     | L.Slashbar => true
     | L.Backslash => true
+    | L.Backslashbar => true
     | L.Squad => true
     | L.Gradeup => true
     | L.Gradedown => true
     | L.Each => true
+    | L.JotDia => true
     | L.Add => true
     | L.Sub => true
     | L.Times => true
@@ -107,6 +109,7 @@ fun is_symb t =
     | L.Match => true
     | L.Nmatch => true
     | L.Tilde => true
+    | L.TildeDia => true
     | L.Intersect => true
     | L.Union => true
     | L.StarDia => true
@@ -630,23 +633,23 @@ val env0 =
         (Fac,       [fun1,fun2]),
         (Circstar,  [fun1,fun2]),
         (Pow,       [fun1,fun2]),
-        (Vcat,      [fun2]),
+        (Vcat,      [fun1,fun2]),
         (Lt,        [fun2]),
         (Gt,        [fun2]),
         (Lteq,      [fun2]),
         (Gteq,      [fun2]),
         (Eq,        [fun2]),
         (Neq,       [fun2]),
-        (Take,      [fun2]),
-        (Drop,      [fun2]),
+        (Take,      [fun1,fun2]),
+        (Drop,      [fun1,fun2]),
         (Or,        [fun2]),
         (And,       [fun2]),
         (Nor,       [fun2]),
         (Nand,      [fun2]),
-        (Match,     [fun2]),
+        (Match,     [fun1,fun2]),
         (Nmatch,    [fun1,fun2]),
-        (Intersect, [fun2]),
-        (Union,     [fun2]),
+        (Intersect, [fun1,fun2]),
+        (Union,     [fun1,fun2]),
         (Ring,      [fun1,fun2,opr2fun1,opr2fun2]),     (* fun1,fun2: hack to resolve Ring Dot (outer product) as an application of a dyadic operator *)
         (Each,      [opr1fun1,opr1fun2]),
         (StarDia,   [opr2fun1]),
@@ -654,7 +657,9 @@ val env0 =
         (Slash,     [opr1fun1]),
         (Slashbar,  [opr1fun1]),
         (Backslash, [opr1fun1]),
-        (Squad,     [fun1]),
+        (Backslashbar, [opr1fun1]),
+        (JotDia,    [opr2fun1, opr2fun2]),
+        (Squad,     [fun1,fun2]),
         (Thorn,     [fun1,fun2]),
         (Dot,       [opr2fun2])  (* MEMO: back to opr2fun2 *)
        ]
